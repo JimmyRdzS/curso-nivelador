@@ -61,9 +61,9 @@ dockerizada. (2 puntos)
 ### Uso con Docker ###
 **Requisitos previos:** Para facilitar la instalación y manejo de los contenedores es necesario instalar docker.
 1. Lo primero que se tiene que hacer es revisar el archivo Dockerfile (O crearlo si no existe), el cual tendrá las instrucciones necesarias para ejecutar y compilar nuestra aplicación
-2. Luego vamos a abrir la terminar y vamos a crear una imagen basada en el archivo *Dockerfile*
+2. Luego vamos a abrir la terminal y vamos a crear una imagen basada en el archivo *Dockerfile*
 	* Para crear la imagen podemos ejecutar el siguiente comando `docker build -t curso-nivelador/node .`
 3. Podemos verificar que la imagen haya sido creada ingresando en la terminal el siguiente comando: `docker images`
 4. Finalmente vamos a crear el contenedor ejecutando el siguiente comando:
 	* `docker run -p 8000:8080 curso-nivelador/node`
-5. Nuestra API Estara corriendo en la instancia de docker en el puerto 8000 que fue el que publicamos `localhost:8000/cowsay`
+5. El servicio de la API estará corriendo desde la instancia de docker que se publicó en el puerto 8000 (`localhost:8000/cowsay`)
