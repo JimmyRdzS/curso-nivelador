@@ -51,9 +51,19 @@ dockerizada. (2 puntos)
 ### Instrucciones de uso ###
 1. Clonar el repositorio
 2. Instalar las librerías que requiere el proyecto
-	* Se puede utilizar el comando `npm instal` para instalar los paquetes que ya vienen indicados en el archivo `package.json`
-3. El código para levantar el servicio de la API se encuentra en la carpeta `app` en el archivo `server.js` por lo que podemos ejecutar el proyecto con el siguiente comando `node app/server.js`
+	* Se puede utilizar el comando `npm install` para instalar los paquetes que ya vienen indicados en el archivo `package.json`
+3. El código para levantar el servicio de la API se encuentra en la carpeta `app` en el archivo `server.js`, para ejecutar dicho archivo se puede utilizar el siguiente comando: `node app/server.js`
+	* *Se configuró el proyecto para correr en el puerto 8080, esto puede configurarse en la línea 5 del archivo server.js por si se quiere utilizar otro puerto*
+4. Se puede probar la API directamente en el navegador o bien utilizando herramientas como Postman
 
 ---
 
 ### Uso con Docker ###
+**Requisitos previos:** Para facilitar la instalación y manejo de los contenedores es necesario instalar docker.
+1. Lo primero que se tiene que hacer es revisar el archivo Dockerfile (O crearlo si no existe), el cual tendrá las instrucciones necesarias para ejecutar y compilar nuestra aplicación
+2. Luego vamos a abrir la terminar y vamos a crear una imagen basada en el archivo *Dockerfile*
+	* Para crear la imagen podemos ejecutar el siguiente comando `docker build -t curso-nivelador/node .`
+3. Podemos verificar que la imagen haya sido creada ingresando en la terminal el siguiente comando: `docker images`
+4. Finalmente vamos a crear el contenedor ejecutando el siguiente comando:
+	* `docker run -p 8000:8080 curso-nivelador/node`
+5. Nuestra API Estara corriendo en la instancia de docker en el puerto 8000 que fue el que publicamos `localhost:8000/cowsay`
