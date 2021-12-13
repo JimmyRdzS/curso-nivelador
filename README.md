@@ -1,8 +1,8 @@
 # Curso Nivelador #
 ## Actividad de evaluación ##
 
+---
 
-### Curso Nivelador: Master en Full Stack Web Development ###
 ### Presentación de la actividad y objetivos ###
 
 **Ejercicios a realizar**
@@ -23,28 +23,37 @@ instrucciones para poder usar el código en otra máquina. (1 punto)
 Añadir al *README.md* una sección explicando cómo hacer uso de la solución
 dockerizada. (2 puntos)
 
+---
 
-### Descripción ###
+### Descripción e instrucciones de uso ###
 - [x] Instalar un IDE
 	* Se instaló Sublime Text 4
 	* Se instaló Visual Studio Code
-
 - [x] Crear API con Node.js
 	* Se configuraron 4 rutas/endpoints en la API (2 para peticiones GET y 2 para peticiones POST), todas cuentan con la misma respuesta.
 	* Endpoints:
 		* `'/'`
 		* `'/cowsay'`
 		* Ejemplo: `(POST) localhost:8080/cowsay`
-
 - [x] Perfil de GitHub
 	* No se creó ningún perfil nuevo de GitHub, se está utilizando una cuenta personal ya existente
 	* [Jaime Rodriguez](https://github.com/JimmyRdzS)
-
 - [x] Repositorio público de GitHub
 	* [Curso Nivelador](https://github.com/JimmyRdzS/curso-nivelador)
-
 - [x] Creación de README.md con la descripción e instrucciones del ejercicio.
+	* [Instrucciones](https://github.com/JimmyRdzS/curso-nivelador#instrucciones-de-uso)
+- [x] Dockerizar el código del proyecto
+- [x] Añadir sección al README.md para explicar la solución
+	* [Sección de explicación](https://github.com/JimmyRdzS/curso-nivelador#uso-con-docker)
 
-- [ ] Dockerizar el código del proyecto
+---
 
-- [ ] Añadir sección al README.md para explicar la solución
+### Instrucciones de uso ###
+1. Clonar el repositorio
+2. Instalar las librerías que requiere el proyecto
+	* Se puede utilizar el comando `npm instal` para instalar los paquetes que ya vienen indicados en el archivo `package.json`
+3. El código para levantar el servicio de la API se encuentra en la carpeta `app` en el archivo `server.js` por lo que podemos ejecutar el proyecto con el siguiente comando `node app/server.js`
+
+---
+
+### Uso con Docker ###
